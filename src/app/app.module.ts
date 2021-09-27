@@ -5,6 +5,7 @@ import { NativeScriptModule } from '@nativescript/angular'
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { ItemsComponent } from './item/items.component'
+
 @NgModule({
   bootstrap: [AppComponent],
   imports: [NativeScriptModule, AppRoutingModule, HttpClientModule],
