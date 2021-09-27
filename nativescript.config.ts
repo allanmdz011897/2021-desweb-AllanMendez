@@ -1,7 +1,7 @@
 import { NativeScriptConfig } from '@nativescript/core';
 
 export default {
-  id: 'org.nativescript.deswebAllanMendez',
+  id: 'org.nativescript.SegundoParcialAPI',
   appPath: 'src',
   appResourcesPath: 'App_Resources',
   android: {

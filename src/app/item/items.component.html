@@ -10,7 +10,6 @@ So you can still use template expressions, bindings, templates as well as all th
 The ActionBar is the NativeScript common abstraction over the Android ActionBar and iOS NavigationBar.
 http://docs.nativescript.org/ui/action-bar
 -->
-<ActionBar title="My App"> </ActionBar>
 
 <!--
 The GridLayout arranges its child elements in a table structure of rows and columns.
@@ -22,11 +21,30 @@ These components make use of the NativeScript core theme, which styles them with
 The theme also provides a set of helper class names such as p-20, h1, h2, and text-center to enhance styling.
 You can learn more about the NativeScript core theme at https://github.com/nativescript/theme
 -->
+<ActionBar backgroundColor="#b2b2b2">
+
+  <StackLayout orientation="horizontal">
+
+    <Image id="nasaimg" src="https://api.nasa.gov/assets/img/favicons/favicon-192.png" verticalAlignment="center">
+    </Image>
+
+    <label text=" Consumiendo API de la NASA" fontSize="18" color=red verticalAlignment="center" font-family="Courier"></label>
+  </StackLayout>
+</ActionBar>
+
 <GridLayout>
   <ListView [items]="items">
     <ng-template let-item="item">
-      <StackLayout [nsRouterLink]="['/item', item.id]">
-        <Label [text]="item.name"></Label>
+      <StackLayout>
+        <Label id="fTierra" [text]="'Fecha En La Tierra: '+item.earth_date"></Label>
+        <Label class="itemsLabels" [text]="'ID De Camara Del Rover: '+item.camera.id"></Label>
+        <Image id="imgApi" [src]="item.img_src.replace('http','https')"></Image>
+        <Label class="itemsLabels" [text]="'Nombre De Camara Del Rover: '+item.camera.full_name"></Label>
+        <Label class="itemsLabels" [text]="'ID De Rover: '+item.camera.rover_id"></Label>
+        <Label class="itemsLabels" [text]="'Nombre Del Rover: '+item.rover.name"></Label>
+        <Label class="itemsLabels" [text]="'Estatus Del Rover: '+item.rover.status"></Label>
+        <Label class="itemsLabels" [text]="'Fecha Aterrizaje Del Rover: '+item.rover.landing_date"></Label>
+        <Label class="itemsLabels" [text]="'Fecha Lanzamiento Del Rover: '+item.rover.launch_date"></Label>
       </StackLayout>
     </ng-template>
   </ListView>

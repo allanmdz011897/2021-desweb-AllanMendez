@@ -1,0 +1,28 @@
+#nasaimg{
+    width: 70;
+    height: 70;
+    border-radius: 10;
+}
+
+#imgApi{
+    width: 180;
+    height: 90;
+    margin-top: 30;
+}
+
+#fTierra{
+    text-align: justify;
+    background-color: #AEB6BF;
+    color: whitesmoke;
+    font-size: 17;
+    border-radius: 20;
+}
+
+#nombreRover{
+    text-align: justify;
+}
+
+.itemsLabels{
+    text-align: justify;
+    font-size: 17;
+}
