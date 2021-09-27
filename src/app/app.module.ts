@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { ItemsComponent } from './item/items.component'
 
+
 @NgModule({
   bootstrap: [AppComponent],
   imports: [NativeScriptModule, AppRoutingModule, HttpClientModule],
@@ -13,4 +14,5 @@ import { ItemsComponent } from './item/items.component'
   providers: [],
   schemas: [NO_ERRORS_SCHEMA],
 })
+
 export class AppModule {}

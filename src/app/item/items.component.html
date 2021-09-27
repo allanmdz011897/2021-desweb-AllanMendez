@@ -24,21 +24,15 @@ You can learn more about the NativeScript core theme at https://github.com/nativ
 <ActionBar backgroundColor="#b2b2b2">
 
   <StackLayout orientation="horizontal">
-
-
     <Image id="logonasa" src="https://api.nasa.gov/assets/img/favicons/favicon-192.png" verticalAlignment="top"> </Image>
     <label text=" Consumiendo API de la NASA" fontSize="18" color=red verticalAlignment="center" font-family="Courier"></label>
-
   </StackLayout>
 </ActionBar>
 
 <GridLayout>
-
   <ListView [items]="items">
     <ng-template let-item="item">
-
       <StackLayout>
-        
         <Label id="fTierra" [text]="'Fecha En La Tierra: '+item.earth_date"></Label>
         <Label class="itemsLabels" [text]="'ID De Camara Del Rover: '+item.camera.id"></Label>
         <Image id="imgApi" [src]="item.img_src.replace('http','https')"></Image>
@@ -48,7 +42,6 @@ You can learn more about the NativeScript core theme at https://github.com/nativ
         <Label class="itemsLabels" [text]="'Estatus Del Rover: '+item.rover.status"></Label>
         <Label class="itemsLabels" [text]="'Fecha Aterrizaje Del Rover: '+item.rover.landing_date"></Label>
         <Label class="itemsLabels" [text]="'Fecha Lanzamiento Del Rover: '+item.rover.launch_date"></Label>
-     
       </StackLayout>
     </ng-template>
   </ListView>
